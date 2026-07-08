@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Indonesia</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f4f4f4;
+            scroll-behavior: smooth;
+        }
+        header{ background:#A689E1; color:white; text-align:center; padding:20px; }
+        nav{ background:#4A0E4E; text-align:center; padding:10px; position: sticky; top: 0; z-index: 100; }
+        nav a{ color:white; text-decoration:none; margin:15px; font-weight:bold; cursor: pointer; }
+        nav a:hover{ text-decoration: underline; }
+        .container{ width:80%; margin:20px auto; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); }
+        img{ width:100%; border-radius:10px; }
+        footer{ background:#A689E1; color:white; text-align:center; padding:15px; margin-top:20px; }
+        button{ background:#A689E1; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; margin-top:10px; }
+        button:hover{ background:#4A0E4E; }
+        .section { margin-bottom: 40px; padding-top: 20px; }
+        
+        .card-materi{
+            background:#f8f9fa;
+            padding:15px;
+            margin:10px 0;
+            border-left:5px solid #2c7be5;
+            border-radius:5px;
+        }
+
+        .isi-materi{
+            display: none; 
+            background: #eef5ff;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #2c7be5;
+        }
+        .isi-materi h4{ color: #1f5fbf; margin-bottom: 10px; }
+        .isi-materi ul{ margin-left: 20px; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Website Pendidikan</h1>
+    <p>Belajar untuk Masa Depan yang Lebih Baik</p>
+</header>
+
+<nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#materi">Materi</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<div class="container">
+
+    <div id="beranda" class="section">
+        <img src="WhatsApp Image 2026-07-07 at 16.24.51.jpeg" alt="Pendidikan">
+        <img src="WhatsApp Image 2026-07-07 at 16.24.58.jpeg" alt="Pendidikan">
+        <h2>Selamat Datang di Website Pendidikan</h2>
+        <p>Pendidikan merupakan proses belajar yang bertujuan untuk meningkatkan pengetahuan, keterampilan, dan karakter seseorang sehingga mampu menghadapi tantangan di masa depan.</p>
+        <h3>Manfaat Pendidikan</h3>
+        <ul>
+            <li> Menambah ilmu pengetahuan dan wawasan</li>
+            <li>Membentuk karakter yang baik dan berakhlak</li>
+            <li> Meningkatkan peluang pekerjaan dan karir</li>
+            <li> Mengembangkan kemampuan berpikir kritis</li>
+        </ul>
+        <button onclick="pesan()">Mulai Belajar Sekarang</button>
+    </div>
+
+    <div id="tentang" class="section">
+        <h2>Tentang Kami</h2>
+        <p>Website Pendidikan Indonesia adalah platform belajar online gratis yang dibuat untuk membantu siswa, mahasiswa, dan masyarakat umum di seluruh Indonesia.</p>
+        <p><b>Visi:</b> Menciptakan generasi Indonesia yang cerdas, kreatif, dan berdaya saing global.</p>
+        <p>Dibuat dengan ❤️ oleh kelompok 4, 2026</p>
+    </div>
+
+    <div id="materi" class="section">
+        <h2>Materi Pembelajaran Lengkap</h2>
+        <p>Klik tombol di bawah untuk melihat materi:</p>
+
+        <div class="card-materi">
+            <h3>📐 Matematika</h3>
+            <p>Aljabar, Trigonometri, Statistika, Kalkulus, dan Geometri.</p>
+            <button onclick="toggleMateri('matematika')">Lihat Materi Matematika</button>
+            
+            <div id="matematika" class="isi-materi">
+                <h4>1. Aljabar</h4>
+                <p>Aljabar adalah cabang matematika yang menggunakan simbol untuk mewakili angka.</p>
+                <p><b>Rumus:</b> $2x + 5 = 15$ → $x = 5$</p>
+                
+                <h4>2. Statistika</h4>
+                <p>Statistika mempelajari pengumpulan, analisis, dan penyajian data.</p>
+                <ul>
+                    <li><b>Mean:</b> Rata-rata = Jumlah data / Banyak data</li>
+                    <li><b>Median:</b> Nilai tengah dari data</li>
+                    <li><b>Modus:</b> Data yang paling sering muncul</li>
+                </ul>
+
+                <h4>3. Geometri</h4>
+                <p>Mempelajari bangun datar dan bangun ruang.</p>
+                <p><b>Luas Lingkaran:</b> $L = π × r^2$</p>
+            </div>
+        </div>
+
+        <div class="card-materi">
+            <h3>🧪 IPA - Sains</h3>
+            <p>Fisika, Kimia, dan Biologi. Dilengkapi dengan contoh soal.</p>
+            <button onclick="toggleMateri('ipa')">Lihat Materi IPA</button>
+
+            <div id="ipa" class="isi-materi">
+                <h4>1. Fisika - Gerak</h4>
+                <p><b>Rumus Kecepatan:</b> $v = s / t$ <br> v = kecepatan, s = jarak, t = waktu</p>
+
+                <h4>2. Kimia - Unsur</h4>
+                <p>Unsur adalah zat tunggal yang tidak dapat diuraikan lagi. Contoh: H = Hidrogen, O = Oksigen, Na = Natrium</p>
+
+                <h4>3. Biologi - Sel</h4>
+                <p>Sel adalah unit terkecil penyusun makhluk hidup. <br> <b>Organel:</b> Inti sel, Mitokondria, Kloroplas pada tumbuhan.</p>
+            </div>
+        </div>
+
+        <div class="card-materi">
+            <h3>📚 Bahasa</h3>
+            <p>Bahasa Indonesia dan Bahasa Inggris.</p>
+            <button onclick="toggleMateri('bahasa')">Lihat Materi Bahasa</button>
+
+            <div id="bahasa" class="isi-materi">
+                <h4>1. Bahasa Indonesia - Teks Prosedur</h4>
+                <p>Teks yang berisi langkah-langkah untuk melakukan sesuatu.</p>
+                <p><b>Struktur:</b> Tujuan → Bahan/Alat → Langkah-langkah</p>
+
+                <h4>2. Bahasa Inggris - Tenses</h4>
+                <ul>
+                    <li><b>Simple Present:</b> I eat rice every day. Untuk kebiasaan</li>
+                    <li><b>Simple Past:</b> I ate rice yesterday. Untuk masa lalu</li>
+                    <li><b>Simple Future:</b> I will eat rice tomorrow. Untuk masa depan</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card-materi">
+            <h3>🌍 IPS - Sosial</h3>
+            <p>Sejarah, Geografi, Ekonomi, dan Sosiologi.</p>
+            <button onclick="toggleMateri('ips')">Lihat Materi IPS</button>
+
+            <div id="ips" class="isi-materi">
+                <h4>1. Sejarah - Proklamasi</h4>
+                <p>Proklamasi Kemerdekaan Indonesia dibacakan pada 17 Agustus 1945 oleh Soekarno dan Hatta di Jl. Pegangsaan Timur No. 56 Jakarta.</p>
+
+                <h4>2. Geografi - Indonesia</h4>
+                <p>Indonesia terletak di antara 2 benua: Asia dan Australia, dan 2 samudra: Pasifik dan Hindia. Ibukota baru: Nusantara.</p>
+
+                <h4>3. Ekonomi - Permintaan & Penawaran</h4>
+                <p><b>Hukum Permintaan:</b> Jika harga naik, jumlah barang yang diminta turun.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="kontak" class="section">
+        <h2>Hubungi Kami</h2>
+        <p><b>📧 Email:</b> info@pendidikanindonesia.com</p>
+        <p><b>📱 WhatsApp:</b> 08xxxx</p>
+        <p><b>📍 Alamat:</b> Jl.simpang taluak, Bukittinggi, Sumatera Barat</p>
+
+        <h3>Kirim Pesan</h3>
+        <form onsubmit="kirimPesan(event)">
+            <input type="text" placeholder="Nama Anda" required style="width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"><br>
+            <input type="email" placeholder="Email Anda" required style="width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"><br>
+            <textarea placeholder="Pesan Anda" rows="4" required style="width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"></textarea><br>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Website Pendidikan Indonesia | Dibuat oleh kelompok 4
+</footer>
+
+<script>
+function pesan(){
+    alert("Semangat belajar! Pendidikan adalah investasi terbaik untuk masa depan.");
+}
+
+function kirimPesan(e){
+    e.preventDefault();
+    alert("Terima kasih! Pesan kamu sudah kami terima. Kami akan balas secepatnya.");
+}
+
+function toggleMateri(id){
+    let materi = document.getElementById(id);
+    if(materi.style.display === "block"){
+        materi.style.display = "none"; 
+    } else {
+        materi.style.display = "block"; 
+    }
+}
+</script>
+
+</body>
+</html>
